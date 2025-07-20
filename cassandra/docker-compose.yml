@@ -1,0 +1,12 @@
+version: '3'
+services:
+  cassandra:
+    container_name: cassandra
+    networks:
+      - cassandra
+    image: 'cassandra:latest'
+    ports:
+      - '9042:9042'
+networks:
+  cassandra:
+    driver: bridge
